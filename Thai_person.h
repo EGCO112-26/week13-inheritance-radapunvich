@@ -11,10 +11,10 @@ public:
         nat_id = nid;
         // cout << "Thai Person constructor: " << nat_id << endl;
     }
-    // Step 3: Destructor
+    
     ~Thai_person() {}
 
-    // Step 4: display_thai
+    
     void display_thai() {
         cout << "National ID: " << nat_id << endl;
     }

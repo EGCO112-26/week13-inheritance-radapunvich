@@ -13,6 +13,7 @@ public:
     }
     
     ~student() {
+      
         // Simple destructor for student specific cleanup if needed
     }
 

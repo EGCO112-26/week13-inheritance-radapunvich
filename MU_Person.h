@@ -21,7 +21,7 @@ public:
         cout << "Node " << id << " is being deleted" << endl;
     }
 
-    // Step 5: display_person showing everything
+    
     void display_person() {
         display_thai(); 
         cout << "Name: " << name << endl;
