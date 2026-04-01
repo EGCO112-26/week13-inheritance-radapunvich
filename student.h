@@ -1,29 +1,28 @@
+#ifndef student_h
+#define student_h
 #include "MU_Person.h"
 
-
-class student:public MU_person{
+class student : public MU_person {
 private:
-          double gpa; 
-	
+    double gpa; 
 public:
-    student(long=111 ,double=2.5,string="Nattawut");
-    ~student();
-    void display(); // display_person
-   
+    student(long id = 111, double g = 2.5, string n = "Nattawut", long nid = 0) 
+        : MU_person(id, n, nid) {
+        gpa = g;
+        cout << "MU student constructor  " << gpa << endl;
+    }
+    
+    ~student() {
+        // Simple destructor for student specific cleanup if needed
+    }
+
+    void show_node() override { 
+    cout << " Node data:" << id << endl; 
+}
+    
+    void display() {
+        display_person(); 
+        cout << "Gpa: " << gpa << endl;
+    }
 };
-
-student::student(long i, double g,string s){
-// Finish constructor to set all values
-         cout<<"MU student constructor  "<<gpa<<endl;
-         
-  
-}
-student::~student(){
-     cout<<"-------"<<endl;
-     cout<<"student destructor "<<gpa<<endl; 
-}
-
-
-void student::display(){
-  //Finish Display function
-}
+#endif
